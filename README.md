@@ -9,6 +9,10 @@ Tested with ESMR5.0 on a CTA5ZIV-METER using Node-Red JS
 
 
 # Usage: 
+
+Include the `p1-smart-meter-crc16.js` file.
+
+
 ```
 /*  ==========================================================================
 
@@ -55,8 +59,9 @@ console.log("CRC valid? " + CRC_is_Valid);
 ```
 
 
+
 ```
-Output > CRC valid? true
+Output> CRC valid? true
 ```
 
 ##### tags
