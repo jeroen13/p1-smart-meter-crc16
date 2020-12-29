@@ -115,11 +115,15 @@ function Dec2Hex16(i) {
 function calcCRC16(telegram, crlf) 
 {
   // Get the CRC from the telegram
-  var CRC_Telegram = telegram.substr(telegram.indexOf('!')+1, telegram.length);  
+  var CRC_Telegram = telegram.substr(telegram.indexOf('!')+1, telegram.length);
+  CRC_Telegram = CRC_Telegram.replace(/\n\r|\r|\n/g, "");   // Remove leftover 'newline' chars in CRC from telegram
+
+  // Some meters have a backslash in their name, replace with "\\"      -- UNTESTED -- 
+  //telegram = telegram.replace(/\\/g, "\\\\");                         -- UNTESTED --      
 
   // Formatting according to Windows CR+LF or Unix LF 'new line' characters
-  telegram = telegram.replace(/(\r\n|\r)/g, "\n");                     // Default LF Unix
-  if (crlf) telegram = telegram.replace(/\n/g, "\r\n");                // true = CR+LF Windows, false = LF Unix
+  telegram = telegram.replace(/(\r\n|\r)/g, "\n");                      // Default LF Unix
+  if (crlf) telegram = telegram.replace(/\n/g, "\r\n");                 // true = CR+LF Windows, false = LF Unix
 
   // Remove the CRC from the telegram before calculating the CRC16
   telegram = telegram.substr(0, telegram.indexOf('!')+1);
