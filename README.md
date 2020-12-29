@@ -65,4 +65,4 @@ Output> CRC valid? true
 ```
 
 ##### tags
-CRC16/IBM, CRC16-IBM, CRC16-ARC, CRC16 0xA001, CRC16 Javascript, CRC Javascript, P1 Smart meter checksum, P1 Smart meter CRC, Slimme meter CRC, Smart meter CRC, P1 CRC
+CRC16/IBM, CRC16-IBM, CRC16-ARC, CRC16 0xA001, CRC16 Javascript, CRC Javascript, P1 Smart meter checksum, P1 Smart meter CRC, Slimme meter CRC, Smart meter CRC, P1 CRC, P1 CRC16 berekening, P1 CRC16, P1 Smart meter CRC16
